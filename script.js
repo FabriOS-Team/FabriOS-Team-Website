@@ -5,5 +5,3 @@ document.querySelectorAll('.dropbtn').forEach(button => {
     dropdown.classList.toggle('active');
   });
 });
-
-

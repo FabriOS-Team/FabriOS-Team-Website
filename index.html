@@ -8,29 +8,77 @@
 </head>
 <body>
 <header>
-    
     <nav class="navbar">
-        <ul class="nav-list">
-        <li>
-            <img class="logo" src="./img/logo.svg" width="200px" alt="">
-        </li>
-        <li>
-            <a href="./index.html">Home</a></li>
-        
-        <li class="dropdown">
-            <button class="dropbtn">Products</button>
-            <div class="dropdown-content">
-            <a href="/moduli/yoshiexplorer">YoshiExplorer</a>
-            <a href="/moduli/penguinmod">PenguinMod</a>
-            <a href="/moduli/update">FabriOS Update</a>
-            </div>
-        </li>
-
-        <li><a href="/rituali">Rituali</a></li>
-        <li><a href="/team">Il Team</a></li>
-        </ul>
+        <div class="nav-left">
+            <img class="logo" src="./img/logo.svg" alt="FabriOS Logo">
+            <ul class="nav-list">
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Products</button>
+                        <div class="dropdown-content">
+                            <a href="./fabrios.html">FabriOS</a>
+                            <a href="./fabrios-mobile.html">FabriOS Mobile</a>
+                            <a href="./zenoos.html">ZenoOS</a>
+                        </div>
+                    </li>
+                <li>
+                    <a href="/downloads">Downloads</a>
+                </li>
+                <li>
+                    <a href="./help.html">Help</a>
+                </li>
+                <li>
+                    <a href="./about.html">About Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="./login.html" class="nav-btn login">Log in</a>
+            <a href="./signup.html" class="nav-btn signup">Sign up</a>
+        </div>
     </nav>
 </header>
+<main>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <img src="./img/logo.svg" class="hero-logo" alt="FabriOS Logo">
+      <h1>FabriOS 1, version 25H2</h1>
+      <p class="hero-subtitle">Beta now available!</p>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="products">
+    <h2>Products</h2>
+    <p class="products-desc">There are products created by us with love, tailor-made for you.</p>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <h3>FabriOS</h3>
+        <p>The OS made only for you. Looking for an operating system for your old PC? Or simply want to try something new? FabriOS is the perfect choice. Try it now!</p>
+        <a href="./products/fabrios.html" class="product-btn">Learn more</a>
+      </div>
+
+      <div class="product-card">
+        <h3>FabriOS Mobile</h3>
+        <p>The mobile version of FabriOS. Need a lightweight OS for your phone? Or want to explore a new mobile experience? FabriOS Mobile is the best choice for you.</p>
+        <a href="./products/fabrios-mobile.html" class="product-btn">Learn more</a>
+      </div>
+
+      <div class="product-card">
+        <h3>ZenoOS</h3>
+        <p>Want Linux, but not the usual distros? Meet ZenoOS. KDE lover? We’ve got you covered. Prefer clean, minimal systems? This is for you. Try it now!</p>
+        <a href="./products/zenoos.html" class="product-btn">Learn more</a>
+      </div>
+
+    </div>
+  </section>
+</main>
 <script src="./script.js"></script>
 </body>
 </html>
