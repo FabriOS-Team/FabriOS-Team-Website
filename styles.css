@@ -1,0 +1,215 @@
+body {
+    font-family: Inter Regular;
+    margin: 0;
+}
+
+@font-face {
+    font-family: Inter Regular;
+    src: url(./fonts/Inter_18pt-Regular.ttf);
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* STILE BASE */
+.navbar {
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.dropbtn {
+  background: none;
+  color: #000000;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: Inter Regular;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #fafafa; /* ← sfondo bianco */
+  min-width: 160px;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  border-radius: 4px;
+
+  /* Effetto ascendente */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.dropdown.active .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.dropdown-content a {
+  color: #000000;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #444;
+}
+
+/* MOSTRA DROPDOWN AL CLICK */
+.dropdown.active .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  background-color: #f4f4f4;
+  min-width: 160px;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  border-radius: 4px;
+  pointer-events: none; /* evita clic quando invisibile */
+}
+
+.dropdown.active .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto; /* riattiva clic */
+}
+
+.needed_bg {
+  background-image: url(./img/Immagine1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 729px;
+}
+
+.center_all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginbox {
+    background: #1c1c1c;
+    padding: 40px;
+    border-radius: 8px;
+    width: 350px;
+    color: #f5f5f5;
+    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+    text-align: left;
+}
+
+/* logo */
+.logo {
+    width: 110px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+/* titoli */
+h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #d0d0d0;
+    font-size: 14px;
+}
+
+/* input */
+.inputbox {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 3px;
+    border: 1px solid #555;
+    background: #2b2b2b;
+    color: white;
+    font-size: 14px;
+    font-family: Inter Regular;
+}
+
+.inputbox:focus {
+    border-color: #0078d4;
+    outline: none;
+    background: #333;
+}
+
+/* bottone */
+.loginbtn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    background: #0078d4;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: Inter Regular;
+}
+
+.loginbtn:hover {
+    background: #006cbe;
+}
+
+/* link sotto */
+.forgot {
+    display: block;
+    margin-top: 15px;
+    color: #3aa0ff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+.create {
+    margin-top: 30px;
+    font-size: 14px;
+    text-align: center;
+    color: #ccc;
+}
+
+.create a {
+    color: #3aa0ff;
+    text-decoration: none;
+}
+
+.create a:hover {
+    text-decoration: underline;
+}

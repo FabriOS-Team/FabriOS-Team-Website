@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accedi al tuo FabriOS Account</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div class="needed_bg center_all">
+            <div class="loginbox">
+                <h2>Accedi</h2>
+                <p class="subtitle">Usa il tuo account FabriOS.</p>
+
+                <form>
+                    <input id="mail" type="email" placeholder="Indirizzo email o numero di telefono" class="inputbox mail">
+                    <input id="password" type="password" placeholder="Password" class="inputbox password">
+                </form>
+
+                <button class="loginbtn">Successivo</button>
+
+                <a class="forgot" href="#">Nome utente dimenticato?</a>
+
+                <p class="create">Nuovo utente FabriOS? <a href="#">Crea un account</a></p>
+            </div>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+    <script>
+        async function sha256(message) {
+        const msgBuffer = new TextEncoder().encode(message);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        return hashArray.map(b => b.toString(16).padStart(2,'0')).join('');
+        }
+
+        // Hash pre-calcolata della password “FabriOSTeam12345”
+        const storedEmail = 'admin@fabriosteam.com';
+        const storedHash = 'f3ee3e06f786e23b2d97d8e1b8cfa5b0ef5c8b4c0b132fb3b5e99796b0e7ef65'; 
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+        const email = document.querySelector('.email').value;       // usa querySelector per classi
+        const password = document.querySelector('.password').value; // usa querySelector per classi
+        const hash = await sha256(password);
+
+        if (email === storedEmail && hash === storedHash) {
+            sessionStorage.setItem('loggedIn', 'true');
+            window.location.href = './privatearea.html';
+        } else {
+            alert('Credenziali errate');
+        }
+        });
+    </script>
+
+</body>
+</html>
